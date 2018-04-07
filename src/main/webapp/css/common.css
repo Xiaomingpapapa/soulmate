@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body,html{
+    height:100%;
+    overflow:hidden;
+}
+body{
+    background:url(/soulmate/images/web_login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+hr.hr15 {
+    height: 15px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: none;
+}
+hr.hr50 {
+    height: 50px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: none;
+}
