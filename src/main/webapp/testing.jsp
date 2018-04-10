@@ -19,59 +19,32 @@
                   <li class="layui-nav-item"><a href="">情感测试</a></li>
                 </ul>
                 <hr class="hr50"/>
-                <form class="layui-form" action="">
-                    <div class=“question”>
+                <div class="main-testing">
+                    <div class="question">
                         <div class="title">
-                            <div class="layui-form-item">
-                                <label class="layui-form-label" style="width:10px">1.</label>
-                                <div class="layui-input-inline">
-                                  <input type="text" name="password" autocomplete="off" class="layui-input layui-bg-green" value="请问hello world有什么含义？">
-                                </div>
-                             </div>
+                            
                         </div>
-                        <div class="optionA">
-                            <div class="layui-form-item">
-                                <div class="layui-input-inline" style="width:15px">
-                                    <input type="radio" name="sex" value="男">
-                                </div>
-                                <div class="layui-input-inline" style="width:300px">
-                                    <input type="text" name="password" autocomplete="off" class="layui-input layui-bg-green" value="请问hello world有什么含义ddsafsadfsadfsa？">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="optionB">
-                            <div class="layui-form-item">
-                                <div class="layui-input-inline" style="width:15px">
-                                    <input type="radio" name="sex" value="男">
-                                </div>
-                                <div class="layui-input-inline" style="width:300px">
-                                    <input type="text" name="password" autocomplete="off" class="layui-input layui-bg-blue" value="请问hello world有什么含义？">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="optionB">
-                            <div class="layui-form-item">
-                                <div class="layui-input-inline" style="width:15px">
-                                    <input type="radio" name="sex" value="男">
-                                </div>
-                                <div class="layui-input-inline" style="width:300px">
-                                    <input type="text" name="password" autocomplete="off" class="layui-input layui-bg-green" value="请问hello world有什么含义？">
-                                </div>
-                            </div>
+                        <div class="option">
+                            
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
     <script>
         layui.use(['element','form'], function(){
-          var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-          
+          var element = layui.element //导航的hover效果、二级菜单等功能，需要依赖element模块
+          ,form = layui.form
           //监听导航点击
           element.on('nav(demo)', function(elem){
             //console.log(elem)
             layer.msg(elem.text());
+          });
+          
+          form.on('submit(formDemo)', function(data){
+        	  layer.msg(JSON.stringify(data.field));
+        	  return false;
           });
         });
 </script>

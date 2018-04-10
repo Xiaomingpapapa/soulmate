@@ -1,15 +1,15 @@
 package com.dick.user.model;
 
 public class User {
-    private String username;
+    private String user_name;
     private String password;
-    public String getUsername() {
-        return username;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
-    public String getPassword() {
+    public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+	public String getPassword() {
         return password;
     }
     public void setPassword(String password) {

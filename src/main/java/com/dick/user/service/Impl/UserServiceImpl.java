@@ -1,5 +1,6 @@
 package com.dick.user.service.Impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,9 @@ import com.dick.user.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
     
-    @Autowired
-    private UserDao userDao;
     @Override
     public List<User> findAllUser() {
-        return userDao.findAllUser();
+    	return new ArrayList<>();
+        //return userDao.findAllUser();
     }
 }

@@ -14,7 +14,7 @@
     <!-- data source -->
     <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC"></property>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/soulmate?serverTimezone=UTC"></property>
         <property name="username" value="root"></property>
         <property name="password" value=""></property>
     </bean>
@@ -26,7 +26,7 @@
     
     <!-- mybatic mapper dao层 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.dick.dao"></property>
+        <property name="basePackage" value="com.dick.user.dao"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 </beans>
