@@ -19,15 +19,82 @@
                   <li class="layui-nav-item"><a href="">情感测试</a></li>
                 </ul>
                 <hr class="hr50"/>
-                <div class="main-testing">
-                    <div class="question">
-                        <div class="title">
-                            
-                        </div>
-                        <div class="option">
-                            
-                        </div>
-                    </div>
+                   	<form class="layui-form" action="">
+                   		<div class="question">
+                    		<div class="layui-form-item">
+                    			<label class="layui-form-label" style="width:10px">1.</label>
+                    			<label class="layui-form-label layui-bg-green" style="width:300px;text-align:left">hello world对于程序员有什么特殊含义？</label>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question1" value="a" checked>
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">象征一个好的开始1</label>
+                    			</div>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question1" value="b">
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">象征一个好的开始2</label>
+                    			</div>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question1" value="c">
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">象征一个好的开始3</label>
+                    			</div>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question1" value="d">
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">象征一个好的开始4</label>
+                    			</div>
+                    		</div>
+                   		</div>
+                   		<hr class="hr50">
+                   		<div class="question">
+                    		<div class="layui-form-item">
+                    			<label class="layui-form-label" style="width:10px">2.</label>
+                    			<label class="layui-form-label layui-bg-green" style="width:300px;text-align:left">遇到突如其来的爱情，你将如何面对？</label>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question2" value="a" checked>
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">慎重把握</label>
+                    			</div>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question2" value="b">
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">疯狂陷入</label>
+                    			</div>
+                    		</div>
+                    		<div class="layui-form-item" > 
+                    			<div class="layui-input-inline" style="width:30px">
+                    				<input type="radio" name="question2" value="c">
+                    			</div>
+                    			<div class="layui-input-inline">
+                    				<label class="layui-form-label layui-bg-cyan" style="width:300px;text-align:left">胆怯不敢接受</label>
+                    			</div>
+                    		</div>
+                   		</div>
+                   		  <div class="layui-form-item">
+						  	  <div class="layui-input-block">
+						          <button class="layui-btn" lay-submit lay-filter="formDemo">下一步</button>
+						      </div>
+						  </div>
+                   	</form>
                 </div>
             </div>
         </div>
