@@ -9,7 +9,7 @@
 </head>
 <body>
     <script>
-      window.location.href="/soulmate/system/login.do"
+      window.location.href="/soulmate-update/system/login.do"
     </script>
 </body>
 </html>

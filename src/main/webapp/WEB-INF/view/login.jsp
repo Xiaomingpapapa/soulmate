@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="/soulmate/css/login.css">
+<link rel="stylesheet" href="/soulmate-update/css/login.css">
 <%@ include file="/WEB-INF/view/public/meta.jsp"%>
 <title>Insert title here</title>
 </head>
-<script src="/soulmate/layui/layui.js"></script>
 <body>
     <div class="login">
         <div class="message">Soulmate</div>
@@ -42,18 +41,23 @@
           
           
           //监听提交
-          form.on('submit(log)', function(date){
+          form.on('submit(log)', function(data){
               $.ajax({
-                  type: "post",
-                  url: "system/login.do",
-                  data: data.field,
-                  dataType: "json",
-                  async: false,
-                  success: function(data){
-                      alert("alert")
+                  type : "post",
+                  url : "login.do",
+                  data :data.field,
+                  dataType : "json",
+                  async : true,
+                  success : function(data){
+                      if(data.data!=null){
+                    	  window.location.href="/soulmate-update/testing/testing.do"
+                      }else{
+                          layer.msg("error");
+                      }
                   }
-              })
-          });
+              });
+         return false;
+        });
       });
     </script>
 </body>
