@@ -1,5 +1,6 @@
 package com.dick.user.service.Impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,8 @@ public class TestingServiceImpl implements TestingService{
 	
 	@Override
 	public List<Question> getQuestionList(Map<String, Object> params) {
+		List<Question> tempList = new ArrayList<>();
+		tempList = testingDao.getQuestionList(params);
 		return testingDao.getQuestionList(params);
 	}
 

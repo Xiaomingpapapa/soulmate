@@ -1,6 +1,7 @@
 package com.dick.user.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +31,8 @@ public class TestingController extends BaseController{
 	@RequestMapping("/questionlist.do")
 	@ResponseBody
 	public Object getQuestionList(@RequestParam Map<String, Object> params){
-		
-		List<Question> questionList = testingService.getQuestionList(params);
+		Map<String, Object> tempParams = new HashMap<>();
+		List<Question> questionList = testingService.getQuestionList(tempParams);
 		return putMsgToJsonString(Constants.WebSite.SUCCESS, "", questionList.size(), questionList);
 	}
 

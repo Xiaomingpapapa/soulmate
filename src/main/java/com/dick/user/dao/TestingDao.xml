@@ -3,5 +3,15 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dick.user.dao.TestingDao">
-
+    <select id="getQuestionList" resultMap="questionResultMap">
+        SELECT q.question_id,q.title,o.* FROM question q INNER JOIN `option` o ON o.question_id = q.question_id
+    </select>
+    <resultMap id="questionResultMap" type="com.dick.user.model.Question">
+        <id property="question_id" column="question_id"/>
+        <result property="title" column="title"/>
+         <collection property="option_list" ofType="com.dick.user.model.Option">
+            <result property="option_id" column="option_id"/>
+            <result property="content" column="content" />
+         </collection>
+    </resultMap>
 </mapper>
