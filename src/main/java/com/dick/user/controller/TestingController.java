@@ -2,17 +2,26 @@ package com.dick.user.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.dick.constant.Constants;
+import com.dick.user.dao.TestingDao;
 import com.dick.user.model.Question;
+import com.dick.user.service.TestingService;
 
 @Controller
 @RequestMapping("/testing")
-public class TestingController {
+public class TestingController extends BaseController{
 	
+	
+	@Autowired
+	private TestingService testingService;
 	@RequestMapping("/testing.do")
 	public String testingPage(){
 		return "testing";
@@ -20,8 +29,10 @@ public class TestingController {
 	
 	@RequestMapping("/questionlist.do")
 	@ResponseBody
-	public List<Question> getQuestionList(){
-		return new ArrayList<Question>();
+	public Object getQuestionList(@RequestParam Map<String, Object> params){
+		
+		List<Question> questionList = testingService.getQuestionList(params);
+		return putMsgToJsonString(Constants.WebSite.SUCCESS, "", questionList.size(), questionList);
 	}
 
 }
