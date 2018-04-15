@@ -9,16 +9,19 @@ import com.dick.user.service.SystemService;
 
 @Service
 public class SystemServiceImpl implements SystemService{
-	
-	@Autowired
-	private SystemDao systemDao;
-	@Override
-	public boolean userLoginVerified(User user) {
-	User user2 = systemDao.getUserByName(user.getUser_name());
-	if (user2 == null) {
-		return false;
-	}
-		return true;
-	}
-	
+    
+    @Autowired
+    private SystemDao systemDao;
+    @Override
+    public User userLoginVerified(User user) {
+    User user2 = systemDao.getUserByName(user.getUser_name());
+    if (user2 != null) {
+        if(user2.getPassword().equals(user.getPassword())) {
+            user2.setPassword("");
+            return user2;
+        }
+    }
+
+        return null;
+    }
 }

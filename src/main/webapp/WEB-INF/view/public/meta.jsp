@@ -10,6 +10,6 @@
                 + request.getServerName() + ":" + request.getServerPort()
             + path+"/";
 %>
-
 <link rel="stylesheet" href="<%=basePath%>layui/css/layui.css" media="all" />
+<link rel="stylesheet" href="<%=basePath%>css/common.css">
 <script src="<%=basePath%>layui/layui.js"></script>

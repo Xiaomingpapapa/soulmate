@@ -14,4 +14,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <result property="content" column="content" />
          </collection>
     </resultMap>
+
+    <insert id="saveTestingResult" parameterType="java.util.List">
+        INSERT INTO testing_result(user_id, question_id, option_id, created_on)
+        VALUES
+        <foreach collection="list" item="result" separator=",">
+            (
+                #{result.user_id},
+                #{result.question_id},
+                #{result.option_id},
+                now()
+            )
+        </foreach>
+    </insert>
+    
+    <insert id="generateUserLabel" parameterType="int">
+        INSERT INTO user_label(user_id,label_id,label_content)
+        SELECT #{userId}, otl.label_id, otl.label_content
+        FROM testing_result tsr
+        INNER JOIN option_label otl
+        ON tsr.question_id = otl.question_id AND tsr.option_id = otl.option_id
+        WHERE tsr.user_id = #{user_id}
+    </insert>
+    
+    <update id="updateTestingStatus" parameterType="int">
+        UPDATE user
+        SET is_finished_testing = 1
+        WHERE user_id = #{userId}
+    </update>
 </mapper>

@@ -1,5 +1,6 @@
+
 package com.dick.user.controller;
 
-public class PartnersController {
+public class MomentController {
 
 }

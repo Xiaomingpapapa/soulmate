@@ -12,14 +12,14 @@ import com.dick.user.service.UserService;
 
 @Controller
 @RequestMapping("/user")
-public class UserAccountController extends BaseController{
+public class UserController extends BaseController{
     @Autowired
     private UserService userService;
-    
+
     @ResponseBody
-    @RequestMapping("/userlist.do")
-    public Object getUsers() {
-        List<User> userList = userService.findAllUser();
+    @RequestMapping("/friendlist.do")
+    public Object getFriendList() {
+        List<User> userList = userService.findAllFriend();
         String jsonString = putMsgToJsonString(0, "", 2, userList).toString();
         return putMsgToJsonString(0, "", 2, userList);
     }

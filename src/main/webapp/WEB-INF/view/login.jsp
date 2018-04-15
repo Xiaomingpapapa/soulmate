@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/soulmate-update/css/login.css">
 <%@ include file="/WEB-INF/view/public/meta.jsp"%>
-<title>Insert title here</title>
+<title>login</title>
 </head>
 <body>
     <div class="login">
@@ -38,8 +38,6 @@
           var form = layui.form
           ,$ = layui.jquery
           ,layer = layui.layer;
-          
-          
           //监听提交
           form.on('submit(log)', function(data){
               $.ajax({
@@ -50,7 +48,12 @@
                   async : true,
                   success : function(data){
                       if(data.data!=null){
-                    	  window.location.href="/soulmate-update/testing/testing.do"
+                          if(data.data.is_finished_testing == 0){
+                              window.location.href="<%=basePath%>testing/testing.do"
+                          }
+                          else{
+                              window.location.href="<%=basePath%>system/dashboard.do"
+                          }
                       }else{
                           layer.msg("error");
                       }

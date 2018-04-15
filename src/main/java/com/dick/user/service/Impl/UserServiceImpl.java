@@ -12,10 +12,9 @@ import com.dick.user.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
-    
+
     @Override
-    public List<User> findAllUser() {
-    	return new ArrayList<>();
-        //return userDao.findAllUser();
+    public List<User> findAllFriend() {
+        return null;
     }
 }
