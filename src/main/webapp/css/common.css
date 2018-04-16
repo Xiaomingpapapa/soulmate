@@ -1,12 +1,37 @@
 @charset "UTF-8";
 
+* {
+  box-sizing: border-box;
+}
 body,html{
     height:100%;
-    overflow:hidden;
 }
 body{
     background:url(/soulmate-update/images/web_login_bg.jpg) no-repeat center;
     background-size: cover;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    font-family: 'Lato';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+ul {
+    text-align: center;
 }
 hr.hr15 {
     height: 15px;

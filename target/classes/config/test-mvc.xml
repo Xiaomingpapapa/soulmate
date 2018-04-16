@@ -22,4 +22,14 @@
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+    
+    <!-- 拦截器 -->
+    <mvc:interceptors> 
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/system/login.do"/>
+            <bean class="com.dick.user.interceptor.SessionInterceptor"/> 
+        </mvc:interceptor>
+        
+    </mvc:interceptors>
 </beans>  
