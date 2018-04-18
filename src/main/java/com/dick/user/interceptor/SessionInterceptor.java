@@ -13,9 +13,8 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        String urlStr = request.getRequestURI();
         User user = (User)request.getSession().getAttribute(Constants.SystemConstant.USER);
-        if(user == null && urlStr.indexOf("login") == -1) {
+        if(user == null) {
             response.sendRedirect(request.getContextPath() + "/system/login.do");
             return false;
         }

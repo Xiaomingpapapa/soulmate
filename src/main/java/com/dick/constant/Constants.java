@@ -11,6 +11,7 @@ public class Constants {
 	    public static final String LOGIN = "login";
 	    public static final String TESTING = "testing";
 	    public static final String RECOMMEND_PARTNER = "recommendpartner";
+	    public static final String MESSAGE = "message";
 	}
 	
 	public static interface SystemConstant{
