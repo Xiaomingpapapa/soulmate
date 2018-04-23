@@ -14,7 +14,7 @@
             <div class="layui-col-md6 layui-col-md-offset3" style="background-color:white">
                 <ul class="layui-nav">
                     <li class="layui-nav-item layui-this"><a href="">匹配广场</a></li>
-                    <li class="layui-nav-item"><a href="">聊天</a></li>
+                    <li class="layui-nav-item"><a href="javascript:void(0);" onclick="window.location.href='<%=basePath %>message/messagepage.do'">聊天</a></li>
                     <li class="layui-nav-item"><a href="">好友</a></li>
                     <li class="layui-nav-item"><a href="">动态</a></li>
                 </ul>

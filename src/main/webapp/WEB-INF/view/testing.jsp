@@ -18,6 +18,7 @@
                     <li class="layui-nav-item"><a href="">情感测试</a></li>
                 </ul>
                 <hr class="hr50"/>
+                <div class="main_body">
                     <form id="testing_form"class="layui-form" action="">
                         <div id="question_body"></div>
                         <div class="layui-form-item">
@@ -26,6 +27,7 @@
                             </div>
                         </div>
                     </form>
+                </div>
                 </div>
             </div>
         </div>
